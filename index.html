@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuraga Software - Solusi Software UMKM Terpercaya</title>
+    <meta name="description" content="Nuraga Software menyediakan solusi pengembangan software untuk UMKM dengan paket WordPress, Laravel, dan penyesuaian khusus sesuai kebutuhan bisnis Anda.">
+    
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#3b82f6',
+                        accent: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-lg z-50 transition-all duration-300" id="header">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-primary">
+                    <i class="fas fa-code mr-2"></i>Nuraga Software
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-primary transition-colors">Beranda</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary transition-colors">Tentang</a>
+                    <a href="#services" class="text-gray-700 hover:text-primary transition-colors">Layanan</a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-primary transition-colors">Portfolio</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Kontak</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-700" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden mt-4 pb-4 hidden" id="mobile-menu">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-primary transition-colors">Beranda</a>
+                <a href="#about" class="block py-2 text-gray-700 hover:text-primary transition-colors">Tentang</a>
+                <a href="#services" class="block py-2 text-gray-700 hover:text-primary transition-colors">Layanan</a>
+                <a href="#portfolio" class="block py-2 text-gray-700 hover:text-primary transition-colors">Portfolio</a>
+                <a href="#contact" class="block py-2 text-gray-700 hover:text-primary transition-colors">Kontak</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-20 bg-gradient-to-br from-primary to-secondary text-white">
+        <div class="container mx-auto px-4 py-20">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6" data-aos="fade-up">
+                    Solusi Software untuk
+                    <span class="text-accent">UMKM Indonesia</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Nuraga Software menghadirkan solusi pengembangan software yang terpercaya untuk mengembangkan bisnis UMKM Anda dengan teknologi terdepan
+                </p>
+                <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#services" class="inline-block bg-accent hover:bg-yellow-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                        Lihat Layanan
+                    </a>
+                    <a href="#contact" class="inline-block border-2 border-white hover:bg-white hover:text-primary text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                        Hubungi Kami
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Wave SVG -->
+        <div class="relative">
+            <svg class="w-full h-20 fill-white" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">
+                    Tentang Nuraga Software
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Kami adalah tim profesional yang berdedikasi untuk membantu UMKM Indonesia berkembang melalui solusi teknologi yang tepat guna dan terjangkau.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Mengapa Memilih Kami?</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-primary text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Berpengalaman</h4>
+                                <p class="text-gray-600">Tim developer berpengalaman dengan track record yang solid</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-primary text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Terjangkau</h4>
+                                <p class="text-gray-600">Harga yang kompetitif dan sesuai budget UMKM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-primary text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Support 24/7</h4>
+                                <p class="text-gray-600">Dukungan teknis yang siap membantu kapan saja</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-primary text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Kustomisasi</h4>
+                                <p class="text-gray-600">Solusi yang disesuaikan dengan kebutuhan bisnis Anda</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-primary mb-2">100+</div>
+                            <div class="text-gray-600 mb-6">Proyek Selesai</div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div>
+                                <div class="text-2xl font-bold text-secondary">50+</div>
+                                <div class="text-gray-600 text-sm">Klien Puas</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-secondary">3+</div>
+                                <div class="text-gray-600 text-sm">Tahun Pengalaman</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-secondary">24/7</div>
+                                <div class="text-gray-600 text-sm">Support</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-secondary">100%</div>
+                                <div class="text-gray-600 text-sm">Kepuasan</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">
+                    Paket Layanan Kami
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Pilih paket yang sesuai dengan kebutuhan bisnis Anda. Semua paket dilengkapi dengan dukungan teknis dan maintenance.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- WordPress Package -->
+                <div class="bg-white rounded-lg shadow-lg p-8 border hover:shadow-xl transition-shadow" data-aos="fade-up">
+                    <div class="text-center mb-6">
+                        <i class="fab fa-wordpress text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Paket WordPress</h3>
+                        <p class="text-gray-600">Solusi website profesional dengan WordPress</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Website Responsive</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Admin Panel</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>SEO Optimized</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Plugin Premium</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Training & Support</span>
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-primary mb-4">Mulai 2.5 Juta</div>
+                        <a href="#contact" class="block bg-primary hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors">
+                            Pilih Paket
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Laravel Package -->
+                <div class="bg-white rounded-lg shadow-lg p-8 border hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-center mb-6">
+                        <i class="fab fa-laravel text-4xl text-red-600 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Paket Laravel</h3>
+                        <p class="text-gray-600">Aplikasi web custom dengan Laravel</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Aplikasi Custom</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Database Design</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>API Integration</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Security Features</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Maintenance</span>
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-primary mb-4">Mulai 5 Juta</div>
+                        <a href="#contact" class="block bg-primary hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors">
+                            Pilih Paket
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Custom Package -->
+                <div class="bg-white rounded-lg shadow-lg p-8 border hover:shadow-xl transition-shadow border-accent" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-cogs text-4xl text-accent mb-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Paket Kustomisasi</h3>
+                        <p class="text-gray-600">Solusi sesuai kebutuhan spesifik Anda</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Konsultasi Gratis</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Analisis Kebutuhan</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Teknologi Pilihan</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Scalable Solution</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Long-term Support</span>
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent mb-4">Konsultasi Dulu</div>
+                        <a href="#contact" class="block bg-accent hover:bg-yellow-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors">
+                            Konsultasi
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">
+                    Portfolio Kami
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Beberapa proyek yang telah kami kerjakan dengan hasil yang memuaskan klien.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow" data-aos="fade-up">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <i class="fas fa-shopping-cart text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Toko Online UMKM</h3>
+                        <p class="text-gray-600 mb-4">Website e-commerce dengan sistem pembayaran terintegrasi untuk UMKM lokal.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">WordPress</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">WooCommerce</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center">
+                        <i class="fas fa-utensils text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Sistem POS Restoran</h3>
+                        <p class="text-gray-600 mb-4">Aplikasi Point of Sale untuk restoran dengan fitur inventory dan laporan.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Laravel</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Learning Management System</h3>
+                        <p class="text-gray-600 mb-4">Platform pembelajaran online untuk institusi pendidikan dengan fitur lengkap.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Laravel</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Vue.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">
+                    Apa Kata Klien Kami
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Kepuasan klien adalah prioritas utama kami. Berikut testimoni dari klien yang telah mempercayai layanan kami.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-lg p-8" data-aos="fade-up">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Website toko online yang dibuat Nuraga Software sangat membantu meningkatkan penjualan kami. Tim yang profesional dan responsive!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            B
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-800">Budi Santoso</div>
+                            <div class="text-gray-600 text-sm">Owner Toko Elektronik</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Sistem POS yang dibuat sangat mudah digunakan dan membantu mengelola restoran kami dengan lebih efisien. Highly recommended!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            S
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-800">Sari Dewi</div>
+                            <div class="text-gray-600 text-sm">Owner Warung Padang</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-8" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Platform pembelajaran online yang dibuat sangat sesuai dengan kebutuhan sekolah kami. Support yang diberikan juga sangat baik."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            A
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-800">Ahmad Rahman</div>
+                            <div class="text-gray-600 text-sm">Kepala Sekolah</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">
+                    Hubungi Kami
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Siap untuk mengembangkan bisnis Anda? Hubungi kami sekarang untuk konsultasi gratis dan penawaran terbaik.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <div data-aos="fade-right">
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Alamat</h3>
+                                <p class="text-gray-600">Jl. Teknologi No. 123, Jakarta Selatan, Indonesia 12345</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Telepon</h3>
+                                <p class="text-gray-600">+62 812-3456-7890</p>
+                                <p class="text-gray-600">+62 21-1234-5678</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Email</h3>
+                                <p class="text-gray-600">info@nuragasoftware.com</p>
+                                <p class="text-gray-600">support@nuragasoftware.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Jam Operasional</h3>
+                                <p class="text-gray-600">Senin - Jumat: 09:00 - 18:00</p>
+                                <p class="text-gray-600">Sabtu: 09:00 - 15:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <form class="bg-white rounded-lg shadow-lg p-8">
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Nama Lengkap</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary transition-colors" placeholder="Masukkan nama lengkap">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Email</label>
+                                <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary transition-colors" placeholder="Masukkan email">
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Telepon</label>
+                                <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary transition-colors" placeholder="Masukkan nomor telepon">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Paket Layanan</label>
+                                <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary transition-colors">
+                                    <option>Pilih Paket</option>
+                                    <option>Paket WordPress</option>
+                                    <option>Paket Laravel</option>
+                                    <option>Paket Kustomisasi</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-semibold mb-2">Pesan</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary transition-colors" placeholder="Ceritakan kebutuhan proyek Anda..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold mb-4">
+                        <i class="fas fa-code mr-2"></i>Nuraga Software
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Solusi software terpercaya untuk mengembangkan bisnis UMKM Indonesia dengan teknologi terdepan.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Layanan</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Website Development</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">E-commerce</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Aplikasi Custom</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Maintenance & Support</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Perusahaan</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#about" class="hover:text-white transition-colors">Tentang Kami</a></li>
+                        <li><a href="#portfolio" class="hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Karir</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontak Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Jakarta Selatan, Indonesia
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            +62 812-3456-7890
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            info@nuragasoftware.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Nuraga Software. All rights reserved. Made with ❤️ for Indonesian SMEs</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 opacity-0 pointer-events-none">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('bg-white', 'shadow-lg');
+            } else {
+                header.classList.remove('bg-white', 'shadow-lg');
+            }
+        });
+
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('opacity-0', 'pointer-events-none');
+                backToTop.classList.add('opacity-100');
+            } else {
+                backToTop.classList.add('opacity-0', 'pointer-events-none');
+                backToTop.classList.remove('opacity-100');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Form Submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Terima kasih! Pesan Anda telah terkirim. Kami akan segera menghubungi Anda.');
+            this.reset();
+        });
+
+        // Add some interactive hover effects
+        document.querySelectorAll('.hover\\:shadow-xl').forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                element.style.transform = 'translateY(-5px)';
+            });
+            element.addEventListener('mouseleave', () => {
+                element.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
